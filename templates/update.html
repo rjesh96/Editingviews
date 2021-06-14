@@ -1,0 +1,15 @@
+<form method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <th>
+                {{ form.as_p }}
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit">update</button>
+            </th>
+        </tr>
+    </table>
+</form>

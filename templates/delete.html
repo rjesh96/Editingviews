@@ -1,0 +1,7 @@
+<form method="post">
+    {% csrf_token %}
+    <h3> you want delete employee</h3>
+    <h2>{{ object.idno }}</h2>
+    <h2>{{ object.name }}</h2>
+    <button type="submit">delete</button>
+</form>

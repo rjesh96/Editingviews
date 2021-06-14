@@ -1,0 +1,48 @@
+<html>
+<body>
+<table align="center" border="3" bgcolor="#1e90ff">
+    <tr ><th colspan="9">View All Employee's</th></tr>
+    <tr>
+        <th width="100">IDNO</th>
+        <th width="100">NAME</th>
+        <th width="100">AGE</th>
+        <th width="100">SALARY</th>
+        <th width="100">CONTACT NO</th>
+        <th width="100">EMAIL</th>
+        <th width="100">DOJ</th>
+        <th width="100">UPDATE</th>
+        <th width="100">DELETE</th>
+    </tr>
+    {% for object in object_list %}
+    <tr>
+        <th width="100">{{ object.idno }}</th>
+        <th width="100">{{ object.name }}</th>
+        <th width="100">{{ object.age }}</th>
+        <th width="100">{{ object.salary }}</th>
+        <th width="100">{{ object.contactno }}</th>
+        <th width="100">{{ object.email }}</th>
+        <th width="100">{{ object.doj }}</th>
+        <th width="100">
+            <a href="{% url 'update' object.idno %}">
+                <button type="submit">update</button>
+            </a>
+        </th>
+        <th width="100">
+            <a href="{% url 'delete' object.idno %}">
+                <button type="submit">delete</button>
+            </a>
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+
+<br>
+<br>
+
+
+<form action="/index/">
+    <button type="submit">back</button>
+</form>
